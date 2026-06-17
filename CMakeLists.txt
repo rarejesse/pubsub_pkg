@@ -25,5 +25,22 @@ install(PROGRAMS
   DESTINATION lib/${PROJECT_NAME}
 )
 
+# Add C++ executable
+add_executable(publisher_demo_cpp src/publisher_demo_cpp.cpp)
+ament_target_dependencies(publisher_demo_cpp rclcpp std_msgs geometry_msgs)
+
+install(TARGETS
+  publisher_demo_cpp
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+add_executable(subscriber_demo_cpp src/subscriber_demo_cpp.cpp)
+ament_target_dependencies(subscriber_demo_cpp rclcpp std_msgs geometry_msgs)
+
+install(TARGETS
+  subscriber_demo_cpp
+  DESTINATION lib/${PROJECT_NAME}
+)
+
 
 ament_package()
