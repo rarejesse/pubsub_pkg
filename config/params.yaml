@@ -1,0 +1,12 @@
+turtle_position_controller:
+  ros__parameters:
+    gain_p: 0.5
+    gain_i: 0.0
+    gain_d: 0.0
+
+
+turtle_lane_controller:
+  ros__parameters:
+    gain_p: 0.5
+    gain_i: 0.0
+    gain_d: 0.0
