@@ -27,4 +27,27 @@ install(PROGRAMS
 
 
 
+install(PROGRAMS
+  src/turtle_position_controller.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+install(PROGRAMS
+  src/turtle_lane_controller.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+
+
+# Install launch files.
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}/
+)
+
+# Install config files.
+install(DIRECTORY config
+  DESTINATION share/${PROJECT_NAME}/
+)
+
+
 ament_package()
