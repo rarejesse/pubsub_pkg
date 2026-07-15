@@ -38,7 +38,7 @@ class TurtleController(Node):
         self.gain_d = 0.0
         
         self.timer_period = 0.1  # seconds
-        self.timer = self.create_timer(self.timer_period, self.controller_timer)
+        self.timer = self.create_timer(self.timer_period, self.controller_callback)
 
     def random_initialize_turtle(self):
         angle1 = random.uniform(0.6*math.pi, 0.8*math.pi)
@@ -101,7 +101,7 @@ class TurtleController(Node):
         self.kill_turtle('turtle2')
         self.kill_turtle('turtle3')
 
-    def controller_timer(self):
+    def controller_callback(self):
         #==========================================================================================================================
         #RULES: The forward speed (self.velocity.linear.x) must remain constant the whole time (the value of self.speed)
         #       The lateral speed (self.velocity.linear.y) must remain zero the whole time
