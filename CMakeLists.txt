@@ -25,6 +25,12 @@ install(PROGRAMS
   DESTINATION lib/${PROJECT_NAME}
 )
 
+
+# install(PROGRAMS
+#   src/turtle_position_controller.py
+#   DESTINATION lib/${PROJECT_NAME}
+# )
+
 # Add C++ executable
 add_executable(publisher_demo_cpp src/publisher_demo_cpp.cpp)
 ament_target_dependencies(publisher_demo_cpp rclcpp std_msgs geometry_msgs)
